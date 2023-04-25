@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 loops</title>
+</head>
+<body>
+    <script>
+        //for of loop & for in loop are both ES6 loops.
+        // for of loop will give value {i.e from key : value}
+
+
+        // for of loop
+        let fruits = ["apple" , "mango" , "banana" , "grapes"]
+
+        for (const fruit of fruits) {
+            console.log(fruit); // this is basically the element present at that index of array.
+            console.log(fruits);// this is full array.  which commmon in all loops
+        }
+
+
+        console.log("break");
+
+
+        // for in loop
+        for (const fruit in fruits) {
+            console.log(fruit); // this represents the index number , not the element present at that index.
+            console.log(fruits[fruit]); // this represent the element at that index.
+        }
+    </script>
+</body>
+</html>
