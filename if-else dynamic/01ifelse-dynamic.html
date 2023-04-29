@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="input-age">
+    <button onclick="getAge()">Click</button>
+
+    <script>
+        // INPUT AGE STARTS
+        let inputAge = document.getElementById("input-age"); // try once by commenting this global scope
+        let inputAgeValue = inputAge.value;                 // try once by commenting this global scope
+        let inputAgeNumber = parseInt(inputAgeValue);       // try once by commenting this global scope
+        console.log(inputAgeNumber);                    // what gives difference.--->?
+
+        function getAge() {
+            let inputAge = document.getElementById("input-age");
+            let inputAgeValue = inputAge.value;
+            let inputAgeNumber = parseInt(inputAgeValue);
+            console.log(inputAgeNumber);
+
+            if (inputAgeNumber > 22) {
+                console.log("you can drive");
+                document.write("you can drive")
+            } else {
+                console.log("you cannot drive");
+                document.write("you cannot drive");
+            }
+        }
+        //INPUT AGE ENDS
+
+
+
+
+    </script>
+</body>
+
+</html>
