@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table action="">
+<tr>
+    <td><label for="maths">maths</label></td>
+    <td><input type="text" name="" id="maths"></td>
+</tr>
+<tr>
+    <td><label for="science">science</label></td>
+    <td><input type="text" name="" id="science"></td>
+</tr>
+<tr>
+    <td><label for="chemistry">chemistry</label></td>
+    <td><input type="text" name="" id="chemistry"></td>
+</tr>
+<tr>
+    <td><label for="physics">physics</label></td>
+    <td><input type="text" name="" id="physics">
+</tr>
+</table>
+<div><button onclick="percentage()">percentage </button></div>
+
+
+<script>
+
+    
+
+
+    function percentage(){
+        //process to convert string into number starts
+
+        // let maths1 = document.getElementById("maths")  
+        // let mathsValue = maths1.value
+        // let mathsnum = parseInt(mathsValue)
+
+        //process to convert string into number ends
+
+        //shortcut ---> sting to number.
+        
+        let maths = parseInt (document.getElementById("maths").value)
+        let science = parseInt (document.getElementById("science").value)
+        let chemistry = parseInt (document.getElementById("chemistry").value)
+        let physics = parseInt (document.getElementById("physics").value)
+        let sum = maths + science + chemistry + physics
+        let percent =   ((sum) / 400) * 100;
+        console.log(percent);
+
+        console.log(typeof maths , maths);
+        console.log(typeof science , science);
+        console.log(typeof chemistry ,chemistry);
+        console.log(typeof physics , physics);
+    }
+</script>
+</body>
+</html>
