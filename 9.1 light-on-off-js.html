@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <button id="on-btn">Turn On</button>
+    <button id="off-btn">Turn Off</button>
+    <img id="bulb" src="./images/download (1).jpg" alt="Bulb Off">
+<script>
+    // Get references to the on and off buttons and the bulb image
+var onButton = document.getElementById("on-btn");
+var offButton = document.getElementById("off-btn");
+var bulbImage = document.getElementById("bulb");
+
+// Add event listeners to the buttons
+onButton.addEventListener("click", function() {
+  // Set the src attribute of the bulb image to the on image
+  bulbImage.src = "./images/download.jpg";
+  // onButton.innerText = " Turn Off"
+});
+
+offButton.addEventListener("click", function() {
+  // Set the src attribute of the bulb image to the off image
+  bulbImage.src = "./images/download (1).jpg";
+  // offButton.innerText = "Turn On"
+
+});
+
+</script>
+</body>
+
+</html>
