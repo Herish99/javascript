@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" id="Form">
+        <table>
+            <tr>
+                <td><label for="username">username</label></td>
+                <td><input type="text" name="text" id="username" onblur="validateInput(this,'usrerror')">
+                    <span id="usrerror"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="tel" name="txt" id="password" onblur="validateInput(this,'passworderror')">
+                    <span id="passworderror"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="cpassword">confirm password</label></td>
+                <td><input type="tel" name="txt" id="cpassword" onblur="validateInput(this,'cpassworderror')">
+                    <span id="cpassworderror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" onblur="validateInput(this,'emailerror')">
+                    <span id="emailerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="datetime">Date-time</label></td>
+                <td><input type="datetime" name="datetime" id="datetime" onblur="validateInput(this,'datetimeerror')">
+                    <span id="datetimeerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="date">Date</label></td>
+                <td><input type="date" name="date" id="date" onblur="validateInput(this,'dateerror')">
+                    <span id="dateerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="submit" id="btn">
+                </td>
+            </tr>
+
+            <script>
+                // function validateInput(input) {
+                //     let usernameData = document.getElementById("username").value
+                //     // console.log(usernameData);
+                //     if (usernameData == "") {
+                //         document.getElementById("error").innerHTML = "Required data"
+                //     } else {
+                //         document.getElementById("error").innerHTML = " "
+
+                //     }
+                // }
+
+                // let uname = document.getElementById("username").value;
+                // let pass = document.getElementById("password").value;
+                // let cpass = document.getElementById("cpassword").value;
+                // let email = document.getElementById("email").value;
+                // let dt = document.getElementById("datetime").value;
+                // let date = document.getElementById("date").value;
+
+
+                function validateInput(onebyoneinputs, respectiveinputerrors) {
+                    console.log(onebyoneinputs);
+                    if (onebyoneinputs.value === "") {
+                        document.getElementById(respectiveinputerrors).innerHTML = "* Data Mandatory"
+                    } else {
+                        document.getElementById(respectiveinputerrors).innerHTML = ""
+
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+            </script>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
