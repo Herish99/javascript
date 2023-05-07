@@ -44,6 +44,13 @@
                 </td>
             </tr>
             <tr>
+                <td><label for="mobile">mobile</label></td>
+                <td><input type="tel" name="mobile" id="mobile" onblur="validateInput(this)" pattern="[0 9]"
+                        maxlength="10" minlength="10">
+                    <!-- <span id="emailerror"></span> -->
+                </td>
+            </tr>
+            <tr>
                 <td><label for="datetime">Date-time</label></td>
                 <td><input type="datetime" name="datetime" id="datetime" onblur="validateInput(this)">
                     <!-- <span id="datetimeerror"></span> -->
@@ -66,39 +73,42 @@
 
 
 
-                function validateInput(onebyoneinputs) {
-                    // console.log(onebyoneinputs);
-                    let span1 = document.createElement('span')
-                    span1.innerHTML = "error"
-
-
-                    // let x = document.querySelector.('span1')
-                    // console.log(x);
-
-
-                    console.log(onebyoneinputs)
-                    if (onebyoneinputs.value === "") {
-                        onebyoneinputs.parentNode.appendChild(span1)
-                    } else {
-                        onebyoneinputs.parentNode.appendChild('', span1).innerHTML = ""
-
-                    }
-                }
-
-
-
                 // function validateInput(onebyoneinputs) {
-                //     let span1 = document.createElement('span');
-                //     span1.innerHTML = "error";
+                //     // console.log(onebyoneinputs);
+                //     let span1 = document.createElement('span')
+                //     span1.innerHTML = "error"
 
-                //     let x = span1.cloneNode(true);
 
+                //     // let x = document.querySelector.('span1')
+                //     // console.log(x);
+
+
+                //     console.log(onebyoneinputs)
                 //     if (onebyoneinputs.value === "") {
-                //         onebyoneinputs.parentNode.appendChild(span1);
+                //         onebyoneinputs.parentNode.appendChild(span1)
                 //     } else {
-                //         onebyoneinputs.parentNode.removeChild(span1);
+                //         onebyoneinputs.parentNode.appendChild('', span1).innerHTML = ""
+
                 //     }
                 // }
+
+
+
+                function validateInput(onebyoneinputs) {
+                    let span1 = document.createElement('span');
+                    span1.innerHTML = "*required data";
+
+                    if (onebyoneinputs.value === "") {
+                        onebyoneinputs.parentNode.appendChild(span1);
+                        console.log();
+                    } else {
+                        // onebyoneinputs.parentNode.removeChild(span1);
+                        let spanElement = onebyoneinputs.parentNode.querySelector('span');
+                        if (spanElement !== null) {
+                            spanElement.parentNode.removeChild(spanElement);
+                        }
+                    }
+                }
 
 
 
