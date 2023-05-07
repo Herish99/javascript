@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" id="Form">
+        <table>
+            <tr>
+                <td><label for="username">username</label></td>
+                <td>
+                    <input type="text" name="text" id="username" onblur="validateInput(this)">
+                    <!-- <span id="usrerror"></span> -->
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="password" name="txt" id="password" onblur="validateInput(this)">
+                    <!-- <span id="passworderror"></span> -->
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="cpassword">confirm password</label></td>
+                <td><input type="password" name="txt" id="cpassword" onblur="validateInput(this)">
+                    <!-- <span id="cpassworderror"></span> -->
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" onblur="validateInput(this)">
+                    <!-- <span id="emailerror"></span> -->
+                </td>
+            </tr>
+            <tr>
+                <td><label for="datetime">Date-time</label></td>
+                <td><input type="datetime" name="datetime" id="datetime" onblur="validateInput(this)">
+                    <!-- <span id="datetimeerror"></span> -->
+                </td>
+            </tr>
+            <tr>
+                <td><label for="date">Date</label></td>
+                <td><input type="date" name="date" id="date" onblur="validateInput(this)">
+                    <!-- <span id="dateerror"></span> -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="submit" id="btn">
+                </td>
+            </tr>
+
+            <script>
+
+
+
+
+                function validateInput(onebyoneinputs) {
+                    // console.log(onebyoneinputs);
+                    let span1 = document.createElement('span')
+                    span1.innerHTML = "error"
+
+
+                    // let x = document.querySelector.('span1')
+                    // console.log(x);
+
+
+                    console.log(onebyoneinputs)
+                    if (onebyoneinputs.value === "") {
+                        onebyoneinputs.parentNode.appendChild(span1)
+                    } else {
+                        onebyoneinputs.parentNode.appendChild('', span1).innerHTML = ""
+
+                    }
+                }
+
+
+
+                // function validateInput(onebyoneinputs) {
+                //     let span1 = document.createElement('span');
+                //     span1.innerHTML = "error";
+
+                //     let x = span1.cloneNode(true);
+
+                //     if (onebyoneinputs.value === "") {
+                //         onebyoneinputs.parentNode.appendChild(span1);
+                //     } else {
+                //         onebyoneinputs.parentNode.removeChild(span1);
+                //     }
+                // }
+
+
+
+
+
+
+
+
+
+
+            </script>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
