@@ -97,18 +97,24 @@
                 function validateInput(onebyoneinputs) {
                     let span1 = document.createElement('span');
                     span1.innerHTML = "*required data";
+                    let spanElement = onebyoneinputs.parentNode.querySelector('span');
+
 
                     if (onebyoneinputs.value === "") {
-                        onebyoneinputs.parentNode.appendChild(span1);
-                        console.log();
+                        if (spanElement == null) {
+                            onebyoneinputs.parentNode.appendChild(span1);
+                            console.log();
+                        }
                     } else {
                         // onebyoneinputs.parentNode.removeChild(span1);
-                        let spanElement = onebyoneinputs.parentNode.querySelector('span');
+                        // let spanElement = onebyoneinputs.parentNode.querySelector('span');
                         if (spanElement !== null) {
                             spanElement.parentNode.removeChild(spanElement);
                         }
                     }
                 }
+
+
 
 
 
