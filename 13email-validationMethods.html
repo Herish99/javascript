@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" id="Form">
+        <table>
+            <tr>
+                <td><label for="username">username</label></td>
+                <td><input type="text" name="text" id="username" onblur="validateInput(this,'usrerror')">
+                    <span id="usrerror"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="tel" name="txt" id="password" onblur="validateInput(this,'passworderror')">
+                    <span id="passworderror"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="cpassword">confirm password</label></td>
+                <td><input type="tel" name="txt" id="cpassword" onblur="validateInput(this,'cpassworderror')">
+                    <span id="cpassworderror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" onkeyup="validateEmail(this,'emailerror')"
+                        onblur="validateInput(this,'emailerror')">
+                    <span id="emailerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="datetime">Date-time</label></td>
+                <td><input type="datetime" name="datetime" id="datetime" onblur="validateInput(this,'datetimeerror')">
+                    <span id="datetimeerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="date">Date</label></td>
+                <td><input type="date" name="date" id="date" onblur="validateInput(this,'dateerror')">
+                    <span id="dateerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="submit" id="btn">
+                </td>
+            </tr>
+
+            <script>
+
+
+
+                function validateInput(onebyoneinputs, respectiveinputerrors) {
+                    console.log(onebyoneinputs);
+                    if (onebyoneinputs.value === "") {
+                        document.getElementById(respectiveinputerrors).innerHTML = "* Data Mandatory"
+                    } else {
+                        document.getElementById(respectiveinputerrors).innerHTML = ""
+
+                    }
+                }
+
+
+                function validateEmail(onebyoneinputs, respectiveinputerrors) {
+                    console.log(onebyoneinputs.value);
+
+                    //Validation Pattern looks like this.
+                    //let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+
+                    // let regEx = /^(a-z)+$/     console will show false as square bracket is not given which define its range
+                    regEx = /^([a-z])+$/       //now it shows true because square bracket defines the range and it is satisfied
+
+
+                    // we can put abaove full pattern to validate and we can customise it according to requirement.
+                    //   \@ ---------> this defines @ must be included(compulsory)
+                    //    {2,4} ------------> this define the range for eg .====> urname@gmail.com====> where {.com or .in} reprents number of letter range.  letter must be between 2 or 3.
+
+                    // /^+$/  syntax 
+                    console.log(regEx.test(onebyoneinputs.value));
+                }
+
+
+
+
+
+
+
+
+
+
+            </script>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
