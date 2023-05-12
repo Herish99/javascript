@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Restaurant booking</h1>
+        <form action="#" method="post" id="form-id">
+            <table>
+                <label for="">Choice of booking</label>
+                <select name="" id="select-id">
+                    <option class="opt" value="option0">Select the Options</option>
+                    <option class="opt" value="option1">Full Day booking</option>
+                    <option class="opt" value="option2">Half Day booking</option>
+                    <option class="opt" value="option3">Hourly Booking</option>
+                </select>
+
+                <tr>
+                    <td><label for="username">User name</label></td>
+                    <td><input type="text" class="" name="username" id="username" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="mobile">Mobile number</label> </td>
+                    <td><input type="text" class="" name="mobile" id="mobile" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="email">Email</label> </td>
+                    <td><input type="text" class="" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td> <label for="username">Number of person</label> </td>
+                    <td><input type="text" class="" name="numberPerson" id="no_of_person" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+
+    </section>
+
+
+    <script>
+        select = document.getElementById("select-id")
+        // console.log(select);
+        // Options = document.getElementsByClassName("opt")
+        // console.log(Options);
+
+
+        select.addEventListener("change", function () {
+
+            select = document.getElementById("select-id")
+            Options = document.getElementsByClassName("opt")
+            // console.log(Options);
+
+
+            let optionSelected = Options[select.selectedIndex].value                     //OR
+            // let optionSelected = document.getElementById("select-id").value          //OR
+            // let optionSelected = select.value
+            console.log(optionSelected);
+
+
+
+            // Remove previously appended input elements
+            // let appendedInputs = select.parentNode.querySelectorAll("input");
+            // appendedInputs.forEach(function (input) {
+            //     input.remove();
+            // });
+
+            // Remove previously appended select element
+            // let appendedSelect = select.parentNode.querySelector("select");
+            // if (appendedSelect) {
+            //     appendedSelect.remove();
+            // }
+
+
+
+            if (optionSelected === "option1") {
+                // Full Day booking selected
+                // console.log('Full Day booking selected');
+                if (optionSelected) {
+                    let inputDate = document.createElement("input")
+                    inputDate.type = "date"
+                    inputDate.id = "inpDateId"
+                    console.log(inputDate);
+
+                    // Options = document.getElementsByClassName("opt")
+                    select.insertAdjacentElement("afterend", inputDate)          //method1
+                    // select.parentNode.appendChild(inputDate)                        //METHOD2
+                }
+                else {
+
+                }
+            } else if (optionSelected === 'option2') {
+                // Half Day booking selected
+                console.log('Half Day booking selected');
+
+
+
+                inputDate = document.createElement("input")
+                inputDate.type = "date"
+                select.insertAdjacentElement("afterend", inputDate)                 //methods
+                // select.parentNode.appendChild(inputDate)                            // methods
+
+
+
+                let innerSelect = document.createElement("select")
+                console.log(innerSelect);
+
+
+
+                let innerOption1 = document.createElement("option")
+                innerOption1.value = "innerOpt1"
+                innerOption1.text = "Breakfast"
+                console.log(innerOption1);
+                innerSelect.appendChild(innerOption1)
+
+                let innerOption2 = document.createElement("option")
+                innerOption2.value = "innerOpt2"
+                innerOption2.text = "lunch"
+                innerSelect.appendChild(innerOption2)
+
+                let innerOption3 = document.createElement("option")
+                innerOption3.value = "innerOpt3"
+                innerOption3.text = "dinner"
+                innerSelect.appendChild(innerOption3)
+
+
+                select.insertAdjacentElement("afterend", innerSelect)               //method
+                // select.parentNode.appendChild(innerSelect)                          //method
+                // let appendedSelect = innerSelect.parentNode.querySelector("select");
+                // if (appendedSelect) {
+                //     appendedSelect.remove();
+                // }
+                // if (innerSelect !== null) {
+                //     select.insertAdjacentElement("afterend", innerSelect)
+
+                // } else {
+                //     innerSelect.remove()
+
+                // }
+
+
+
+            } else if (optionSelected === 'option3') {
+                // Hourly Booking selected
+                console.log('Hourly Booking selected');
+
+                let inputDateTime = document.createElement("input")
+                inputDateTime.type = "datetime-local"
+                // console.log(inputDateTime);
+
+                select.insertAdjacentElement("afterend", inputDateTime)
+
+
+            } else {
+
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
