@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slider-items img {
+            width: 100%;
+            background-size: contain;
+        }
+
+        .animate-slider {
+            animation: slider 2s ease-in-out;
+        }
+
+        @keyframes slider {
+            0% {
+                /* transform: translateX(1500px) scale(0); */
+                transform: scale(0);
+
+                opacity: 0;
+            }
+
+            50% {
+                /* transform: translateX(0px) scale(1); */
+                transform: scale(0);
+                opacity: 0.5;
+            }
+
+            100% {
+                /* transform: translateX(0px) scale(1); */
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-wrapper">
+        <div class="slider-items"><img src="./img/keagan-henman-oWuS8W283hc-unsplash.jpg" alt=""></div>
+        <div class="slider-items"><img src="./img/kelly-sikkema-Hl3LUdyKRic-unsplash.jpg" alt=""></div>
+        <div class="slider-items"><img src="./img/konstantinos-papadopoulos-bTZRESZHNGU-unsplash.jpg" alt=""></div>
+        <div class="slider-items"><img src="./img/nathan-anderson-XENuKo9Gn8k-unsplash.jpg" alt=""></div>
+        <div class="slider-items"><img src="./img/tr-n-toan-fzG9Jq44iNk-unsplash.jpg" alt=""></div>
+    </div>
+
+
+
+
+    <script>
+        let sliders = document.getElementsByClassName("slider-items")
+        // console.log(sliders);
+        let counter = 0;
+
+        function aniSlider() {
+
+            for (let index = 0; index < sliders.length; index++) {
+                // const element = array[index];
+                // console.log(sliders[index]);
+                sliders[index].style.display = "none"
+
+            }
+            if (counter >= sliders.length) {            //if counter is not defined and condition not applied then it will execute even after the slider images gets over. 
+                counter = 0
+            }
+            console.log(counter, sliders.length);
+
+            sliders[counter].style.display = "block"
+            sliders[counter].classList.add("animate-slider")
+            counter++
+
+            setTimeout(aniSlider, 4000)                         // it will take a break before starting other execution
+            setInterval(aniSlider, 4000)                       // it will not take a break and will execute other program as previour program is defined to get started after 4000ms. difference .
+
+        }
+
+        aniSlider()
+
+
+    </script>
+</body>
+
+</html>
