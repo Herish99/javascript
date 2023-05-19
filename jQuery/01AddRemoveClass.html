@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cust-para {
+            font-size: larger;
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+
+<h1 class="custh1">Jquery Add-Remove class</h1>
+<p class="cust-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur fuga voluptates
+    laborum blanditiis repellendus necessitatibus fugit deleniti ratione delectus?</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur fuga voluptates laborum
+    blanditiis repellendus necessitatibus fugit deleniti ratione delectus?</p>
+<p id="data">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur fuga voluptates laborum
+    blanditiis repellendus necessitatibus fugit deleniti ratione delectus?</p>
+
+<button class="btn-toggle">toggle</button>
+<button class="btn-add">add</button>
+<button class="btn-rmv">remove</button>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(".btn-add").on("click", function () {
+
+            console.log("added");
+            $('.cust-p').addClass("cust-para")
+        })
+        $(".btn-toggle").on("click", function () {
+
+            console.log("toggle");
+            $('.cust-p').toggleClass("cust-para")
+        })
+        $(".btn-rmv").on("click", function () {
+            console.log("removed");
+            $(".cust-p").removeClass("cust-para")
+        })
+    </script>
+
+</body>
+
+</html>
