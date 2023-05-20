@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><label for="c-language">C-language</label></td>
+            <td><input type="text" name="c-language" id="c-language"></td>
+        </tr>
+        <tr>
+            <td><label for="c++">C++</label></td>
+            <td><input type="text" name="c++" id="c++"></td>
+        </tr>
+        <tr>
+            <td><label for="database">Database</label></td>
+            <td><input type="text" name="database" id="database"></td>
+        </tr>
+        <tr>
+            <td><label for="html">HTML</label></td>
+            <td><input type="text" name="html" id="html"></td>
+        </tr>
+        <tr>
+            <td><label for="css">CSS</label></td>
+            <td><input type="text" name="css" id="css"></td>
+        </tr>
+        <tr>
+            <td><label for="php">PHP</label></td>
+            <td><input type="text" name="php" id="php"></td>
+        </tr>
+
+    </table>
+
+    <table>
+        <tr>
+            <td><button id="total" onclick="general()">total</button></td>
+            <td>
+                <div id="tot"></div>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="percent" onclick="general()">Percentage</button></td>
+            <td>
+                <div id="per"></div>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+    <script>
+        function general() {
+            let s1 = parseFloat(document.getElementById("c-language").value)
+            let s2 = parseFloat(document.getElementById("c++").value)
+            let s3 = parseFloat(document.getElementById("database").value)
+            let s4 = parseFloat(document.getElementById("html").value)
+            let s5 = parseFloat(document.getElementById("css").value)
+            let s6 = parseFloat(document.getElementById("php").value)
+
+
+            let totalItem = document.getElementById("total")
+            let totalPercent = document.getElementById("percent")
+
+
+
+            if (event.target.id === "total") {
+                let sum = s1 + s2 + s3 + s4 + s5 + s6;
+                console.log("called");
+                document.getElementById("tot").innerHTML = sum + "/ 600"
+            }
+
+            else if (event.target.id === "percent") {
+                let sum = s1 + s2 + s3 + s4 + s5 + s6;
+                let per = (sum / 600) * 100;
+                document.getElementById("per").innerHTML = per
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>
