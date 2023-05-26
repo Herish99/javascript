@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h4>What is JavaScript?</h4>
+    <div>
+        <p>JavaScript is client side scripting lang</p>
+        <p>We can plugged in JavaScript to our HTML page With script Tag</p>
+        <p>js is prefered in foot</p>
+        <p>we can perform</p>
+        <ul>
+            <li>Handle events</li>
+            <li>Slider</li>
+            <li>Time based events</li>
+            <li>Dynamic CSS</li>
+            <li>User input DOM manupulation</li>
+        </ul>
+    </div>
+
+
+    <h4> What is the use of is NaN function?</h4>
+    <div>
+        <p>
+            The isNaN function takes a single argument and performs the following checks:
+        <ul>
+            <li> If the argument is already of the type "number" and its value is NaN, the function returns true.</li>
+            <li>If the argument is not of the type "number," it is first converted to a numeric value. If the resulting
+                value is NaN, the function returns true.</li>
+            <li>If the argument is of the type "number" and its value is a valid number, the function returns false.
+            </li>
+        </ul>
+
+        <li> console.log(isNaN(123)); // false</li>
+        <li> console.log(isNaN('456')); // false</li>
+        <li> console.log(isNaN('abc')); // true</li>
+        <li> console.log(isNaN(NaN)); // true</li>
+        <li> console.log(isNaN(true)); // false</li>
+
+        </p>
+    </div>
+
+    <h4>What is negative Infinity?</h4>
+    <div>
+        <p>In JavaScript, negative infinity is a special value that represents a number that is infinitely small or the
+            smallest possible value. It is denoted by the constant Number.NEGATIVE_INFINITY. </p>
+
+        <ul>
+
+            <!-- using this example in script tag -->
+            <li>var x = Number.NEGATIVE_INFINITY;
+            <li> console.log(x); // Output: -Infinity</li>
+            <li> console.log(x + 10); // Output: -Infinity</li>
+            <li> console.log(x * 5); // Output: -Infinity</li>
+            <li> console.log(x / 2); // Output: -Infinity</li>
+            </li>
+        </ul>
+    </div>
+
+
+    <h4> Which company developed JavaScript?</h4>
+    <div>
+        <p>JavaScript was developed by Netscape Communications Corporation, a now-defunct computer services company. It
+            was initially created by Brendan Eich in 1995 while he was working at Netscape. The language was originally
+            named "Mocha" but was later renamed to "LiveScript" and finally to "JavaScript" for marketing purposes, as
+            Java was gaining popularity at that time.
+
+            Netscape released JavaScript as part of their Navigator web browser in September 1995. It quickly gained
+            popularity as a scripting language for web development due to its ability to provide interactivity and
+            dynamic content on web pages. JavaScript's success led to its adoption by other web browsers, and it
+            eventually became a widely supported language across different platforms.</p>
+    </div>
+
+    <h4> What are undeclared and undefined variables?</h4>
+    <div>
+        <p>Undeclared variables: These are variables that have not been explicitly declared or defined in the code. When
+            you attempt to use an undeclared variable, it typically results in a runtime error or an exception,
+            depending on the programming language. The error message usually indicates that the variable is not defined
+            or that it is an "undefined" identifier</p>
+        <p>Undefined variables: These are variables that have been declared but have not been assigned a value or have
+            been assigned a special value that represents an absence of meaningful content. When you attempt to access
+            the value of an undefined variable, it will typically return a value called "undefined." This typically
+            occurs when a variable is declared but not initialized with a value</p>
+        <p>
+            <li>// Undeclared variable</li>
+            <li> console.log(undeclaredVariable); // Throws a ReferenceError: undeclaredVariable is not defined</li>
+
+            <li>// Undefined variable</li>
+            <li>var undefinedVariable;</li>
+            <li>console.log(undefinedVariable); // Output: undefined</li>
+
+        </p>
+    </div>
+
+    <h4>Write the code for adding new elements dynamically?</h4>
+    <div></div>
+
+    <h4> What is the difference between ViewState and SessionState?</h4>
+    <div>
+        Session state is saved on the server, ViewState is saved in the page. Session state is usually cleared after a
+        period of inactivity from the user (no request happened containing the session id in the request cookies). The
+        view state is posted on subsequent post back in a hidden field.
+    </div>
+
+    <h4>What is === operator?</h4>
+    <div>
+        The strict equality ( === ) operator checks whether its two operands are equal, returning a Boolean result.
+        Unlike the equality operator, the strict equality operator always considers operands of different types to be
+        different.
+        <p>for E.g :- 123 === "123" =====> returns false as both operand types are different</p>
+        <p>for E.g :- 123 === 123 =====> returns true</p>
+        <p>for E.g :- "string" === "string" =====> returns true</p>
+    </div>
+
+    <h4> How can the style/class of an element be changed?</h4>
+    <div>
+        <p>
+        <h5>changing with style</h5>
+
+        <p>// Changing inline styles</p>
+        <p>var element = document.getElementById("myElement");</p>
+        </p>element.style.color = "red";</p>
+        <p>element.style.fontSize = "20px";</p>
+
+        <h5>changing with class</h5>
+        <p>
+        <p>// Adding and removing CSS classes</p>
+        <p>var element = document.getElementById("myElement");</p>
+        <p> element.classList.add("newClass");</p>
+        <p>element.classList.remove("oldClass");</p>
+        </p>
+
+        </p>
+    </div>
+
+    <h4>How to read and write a file using JavaScript?</h4>
+    <div>
+        <p></p>
+    </div>
+
+    <h4>What are all the looping structure in JavaScript?</h4>
+    <div>
+        <ul>
+            <li>For loop</li>
+            <li>while loop</li>
+            <li>do-while loop</li>
+            <ul>
+                <li>
+                    <b>ES6 loops</b>
+                <li>for-in loop</li>
+                <li>for-of loop</li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h4>How can you convert the string of any base to an integer in JavaScript?</h4>
+    <div>
+        In JavaScript, you can convert a string representing a number in any base to an integer using the parseInt()
+        function. The parseInt() function takes two arguments: the string to be parsed and the base of the number
+        system.
+    </div>
+
+    <h4> What is the function of the delete operator?</h4>
+    <div>
+        <p>
+            The delete operator in JavaScript is used to remove a property from an object or to delete an element from
+            an array. Its function depends on the context in which it is used:
+        <p>
+        <ul>
+            <li>Deleting Object Properties</li>
+            <li>Deleting Array Elements</li>
+
+        </ul>
+        </p>
+        </p>
+    </div>
+
+    <h4>What are all the types of Pop up boxes available in JavaScript?</h4>
+    <div>
+        <p>colnsole.log() => developer oprtion for debug</p>
+        <p>alert() => popup success or signgle aknowlegment</p>
+        <p>confirm() => get confirmation for aprove or rejection</p>
+        <p>prompt() => get inputs from the user</p>
+        <script>
+            // alert("called")
+            // alert("Loggedin success")
+            // confirm("are you sure??")
+            // prompt("Enter addition of 5+5")
+
+
+        </script>
+    </div>
+
+
+    <h4>What is the use of Void (0)?</h4>
+    <div>When a hyperlink is clicked, the browser typically follows the URL specified in the href attribute. However, by
+        setting the href value to javascript:void(0), the browser executes a JavaScript function that does nothing
+        (returns undefined), effectively preventing the default navigation behavior.</div>
+
+    <h4>How can a page be forced to load another page in JavaScript?</h4>
+    <div>To force a page to load another page in JavaScript, you can use the window.location object or the
+        window.location.href property. </div>
+    <script>
+        // window.location.href = "https://www.gogle.com";
+
+    </script>
+
+    <h4> What are the disadvantages of using innerHTML in JavaScript?</h4>
+    <div>
+        <h5><b><i>Security risk</i></b></h5>
+        <p>Using innerHTML to dynamically modify HTML content can introduce security risks if the content being inserted
+            comes from untrusted sources</p>
+        <h5><b><i> Perfomance impact</i></b></h5>
+        <p>Manipulating the innerHTML of an element can be computationally expensive, especially when dealing with large
+            or complex HTML structures. Repeatedly modifying the innerHTML of an element within a loop or frequently
+            updating it can lead to a performance impact, as the browser needs to parse and re-render the entire HTML
+            content each time. In such cases, alternative approaches like manipulating the DOM directly or using more
+            efficient methods like createElement and appendChild may offer better performance.</p>
+        <h5><b><i>Limited control over specific element</i></b></h5>
+        <p>Using innerHTML is a convenient way to modify a chunk of HTML as a whole, but it provides limited control
+            over individual elements within that HTML. It becomes more challenging to selectively modify or interact
+            with specific elements or parts of the HTML structure when using innerHTML. In such cases, manipulating the
+            DOM directly or using specialized methods like querySelector and createElement offer more flexibility and
+            control.</p>
+    </div>
+</body>
+
+</html>
