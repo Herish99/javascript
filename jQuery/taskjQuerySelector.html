@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 0%;
+            background-color: cadetblue;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="tt">welcome</p>
+    <p class="chg-html">learn and explore</p>
+    <p>
+        <input type="text" value="Jquery is library" class="chg-value">
+    </p>
+    <p class="chg-align">changing alignment</p>
+    <div class="box"></div>
+
+
+    <button id="ct">Change Text</button>
+    <button id="ch">Change HTML</button>
+    <button id="cv">Change Value</button>
+    <button id="ca">Change Alignment</button>
+    <button id="cs">Change Shape</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        $("#ct").click(function () {
+            $(".tt").text("text been changed from welcome")
+            $(".tt").attr("align", "center")
+        })
+
+        $("#ch").click(function () {
+            $(".chg-html").html("<b><i>turned out to bold and itaalic </i></b>")
+        })
+
+        $("#cv").click(function () {
+            $(".chg-value").val("inner Vaalue is changed")
+        })
+
+        $("#ca").click(function () {
+            $(".chg-align").attr("align", "center")
+        })
+
+        $("#cs").click(function () {
+            $(".box").css("border-radius", "50%")
+
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
