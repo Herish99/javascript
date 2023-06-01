@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 1px solid
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(222, 221, 219);
+            border: 2px solid;
+            background-size: cover;
+            /* height: 500px; */
+        }
+
+        .padd {
+            padding: 50px 0 50px 0;
+        }
+
+        .box {
+            width: 250px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            text-align: center;
+            margin: 0 auto;
+            /* z-index: 10; */
+            transition-timing-function: ease-in-out;
+            display: grid;
+            place-content: center;
+        }
+
+        .box0 {
+            left: 44%;
+            z-index: 10;
+            background-color: lightblue;
+            top: 0;
+
+        }
+
+        .box1 {
+            /* transform: translateX(20px); */
+            left: 38%;
+            z-index: 6;
+            background-color: aqua;
+            transform: rotateZ(-12deg);
+            transition-timing-function: ease-in-out;
+            top: 0;
+
+        }
+
+        .box2 {
+            left: 50%;
+            z-index: 3;
+            background-color: blue;
+            transform: rotateZ(12deg);
+            top: 0;
+
+        }
+
+        .po-ab {
+            position: absolute;
+        }
+
+        .po-rel {
+            position: relative;
+        }
+
+        .hovr :hover {
+            scale: 1.1;
+            /* transform: translateY(20px); */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container po-rel padd">
+        <div class="hovr po-rel">
+            <div class="box box0 po-ab">
+                <h1>Hover me</h1>
+            </div>
+            <div class="box box1 po-ab">
+                <h1>Hover me</h1>
+            </div>
+            <div class="box box2 po-ab">
+                <h1>Hover me</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
