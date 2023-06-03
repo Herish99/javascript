@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: larger;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #00d3fc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .todo-item {
+            width: 80%;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+            margin-left: auto;
+            position: absolute;
+            right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+
+    <div>
+        <input type="text" id="todo-input" placeholder="Enter a task">
+        <button id="add-btn">Add Task</button>
+    </div>
+
+    <div id="todo-list"></div>
+
+    <script>
+        const todoList = document.getElementById("todo-list");
+        const todoInput = document.getElementById("todo-input");
+        const addBtn = document.getElementById("add-btn");
+
+        addBtn.addEventListener("click", addTask);
+
+        function addTask() {
+            const taskText = todoInput.value.trim();
+
+            if (taskText !== "") {
+                const todoItem = document.createElement("div");
+                todoItem.className = "todo-item";
+                console.log(todoItem);
+
+                const taskTextElement = document.createElement("span");
+                taskTextElement.innerText = taskText;
+                console.log(taskTextElement);
+
+                const deleteBtn = document.createElement("span");
+                deleteBtn.className = "delete-btn";
+                deleteBtn.innerText = "Delete";
+                deleteBtn.addEventListener("click", deleteTask);
+
+                todoItem.appendChild(taskTextElement);
+                todoItem.appendChild(deleteBtn);
+
+                todoList.appendChild(todoItem);
+                // todoInput.value = "";
+            }
+        }
+
+        function deleteTask(event) {
+            const taskItem = event.target.parentNode;
+            todoList.removeChild(taskItem);
+            console.log(event.target.parentNode);
+        }
+    </script>
+</body>
+
+</html>
