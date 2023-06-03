@@ -33,6 +33,7 @@
             background-color: beige;
             border-radius: 5px;
             text-align: center;
+            /* align-items: center; */
             margin: 0 auto;
             /* z-index: 10; */
             transition-timing-function: ease-in-out;
@@ -53,7 +54,7 @@
             left: 38%;
             z-index: 6;
             background-color: aqua;
-            transform: rotateZ(-12deg);
+            transform: rotateZ(-12deg) translate(-10%, 0%);
             transition-timing-function: ease-in-out;
             top: 0;
 
@@ -63,7 +64,7 @@
             left: 50%;
             z-index: 3;
             background-color: blue;
-            transform: rotateZ(12deg);
+            transform: rotateZ(12deg) translate(10%, 0%);
             top: 0;
 
         }
@@ -78,7 +79,7 @@
 
         .hovr :hover {
             scale: 1.1;
-            /* transform: translateY(20px); */
+            /* transform: translate(0%, 5%); */
 
         }
     </style>
@@ -86,7 +87,7 @@
 
 <body>
     <div class="container po-rel padd">
-        <div class="hovr po-rel">
+        <div class="hovr po-rel ">
             <div class="box box0 po-ab">
                 <h1>Hover me</h1>
             </div>
