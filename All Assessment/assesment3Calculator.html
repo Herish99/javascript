@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .col {
+            width: 70px;
+            padding: 10px 0px;
+            text-align: center;
+            color: aliceblue;
+            background-color: rgba(12, 12, 12, 0.932);
+            cursor: pointer;
+        }
+
+        input {
+            display: block;
+            margin: 0 auto;
+            font-size: 24px;
+            width: 274px;
+            min-height: 70px;
+            border: 0px solid;
+            text-align: right;
+            box-shadow: 0px 0px 5px 0px gray;
+        }
+
+        .btn {
+            padding: 6px;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(56 56 56);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <input type="text" name="" id="input-box" class="row" placeholder="0">
+            <div class="row">
+                <div class="col">
+                    <div class="btn">AC</div>
+                </div>
+                <div class="col">
+                    <div class="btn">De</div>
+                </div>
+                <div class="col">
+                    <div class="btn">%</div>
+                </div>
+                <div class="col">
+                    <div class="btn">/</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="btn">7</div>
+                </div>
+                <div class="col">
+                    <div class="btn">8</div>
+                </div>
+                <div class="col">
+                    <div class="btn">9</div>
+                </div>
+                <div class="col">
+                    <div class="btn">*</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="btn">4</div>
+                </div>
+                <div class="col">
+                    <div class="btn">5</div>
+                </div>
+                <div class="col">
+                    <div class="btn">6</div>
+                </div>
+                <div class="col">
+                    <div class="btn">-</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="btn">1</div>
+                </div>
+                <div class="col">
+                    <div class="btn">2</div>
+                </div>
+                <div class="col">
+                    <div class="btn">3</div>
+                </div>
+                <div class="col">
+                    <div class="btn">+</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="btn">00</div>
+                </div>
+                <div class="col">
+                    <div class="btn">0</div>
+                </div>
+                <div class="col">
+                    <div class="btn">.</div>
+                </div>
+                <div class="col">
+                    <div class="btn">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let output = ""
+
+        let button = document.querySelectorAll('.btn')
+        let input = document.getElementById('input-box')
+
+        Array.from(button).forEach((button) => {
+            button.addEventListener('click', (e) => {
+                // console.log("called");
+                console.log(e.target.innerHTML);        //inplace of innerHTML we cn also use textContent
+                // console.log(e.target.textContent);
+
+                if (e.target.innerHTML == "=") {
+                    output = eval(output)
+                    input.value = output
+                } else if (e.target.innerHTML == "AC") {
+                    input.value = output
+                    output = ""
+                }
+                else if (e.target.innerHTML == "De") {
+                    input.value = output
+                    output = ""
+                }
+                else {
+
+                    output = output + e.target.innerHTML
+                    input.value = output
+                    // console.log(output);
+                }
+
+            })
+        })
+    </script>
+</body>
+
+</html>
