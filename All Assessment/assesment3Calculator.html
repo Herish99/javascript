@@ -130,7 +130,6 @@
 
     <script>
         let output = ""
-
         let button = document.querySelectorAll('.btn')
         let input = document.getElementById('input-box')
 
@@ -144,11 +143,12 @@
                     output = eval(output)
                     input.value = output
                 } else if (e.target.innerHTML == "AC") {
-                    input.value = output
+                    // console.log("called AC");
+                    input.value = 0
                     output = ""
                 }
                 else if (e.target.innerHTML == "De") {
-                    input.value = output
+                    input.value = 0
                     output = ""
                 }
                 else {
